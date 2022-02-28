@@ -1,0 +1,155 @@
+.logo a {
+    align-items: center;
+}
+
+.logo h1 {
+    margin-top: 0;
+}
+
+.title {
+    text-align: center;
+}
+
+.inner {
+    max-width: 100%;
+    margin: 0 auto;
+    max-width: 850px;
+    align-items: center;
+    height: 70px;
+    padding: 20px;
+}
+
+nav {
+    width: 100%;
+    position: relative;
+}
+
+.drawer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 70px;
+    padding: 0 1em;
+}
+
+/*ナビゲーション部分*/
+
+.menu ul li a {
+    display: block;
+    font-weight: bold;
+    padding: 1em;
+    text-decoration: none;
+}
+
+.menu {
+    text-align: center;
+    background-color: rgba(241, 241, 241, 0.9);
+    transition: 0.5s ease;
+    /*滑らかに表示*/
+    -webkit-transform: translateX(110%);
+    /*画面より100%外へ押し出し非表示にさせる*/
+}
+
+/*OPEN時の動き*/
+.menu.open {
+    transform: translateX(0%);
+    /*メニューを元の位置へ戻す*/
+}
+
+/*トグルボタンのスタイルを指定*/
+.Toggle {
+    display: block;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    z-index: 3;
+    right: 15px;
+}
+
+.Toggle span {
+    display: block;
+    position: absolute;
+    width: 50px;
+    border-bottom: solid 4px #333;
+    -webkit-transition: .35s ease-in-out;
+    /*変化の速度を指定*/
+    -moz-transition: .35s ease-in-out;
+    /*変化の速度を指定*/
+    transition: .35s ease-in-out;
+    /*変化の速度を指定*/
+
+}
+
+/*各ボーダー少しずつずらす*/
+.Toggle span:nth-child(1) {
+    top: 15px;
+}
+
+.Toggle span:nth-child(2) {
+    top: 30px;
+}
+
+.Toggle span:nth-child(3) {
+    top: 45px;
+}
+
+.Toggle.active span:nth-child(1) {
+    top: 18px;
+    /* 1番目のspanをマイナス45度に */
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* 2番目と3番目のspanを45度に */
+.Toggle.active span:nth-child(2),
+.Toggle.active span:nth-child(3) {
+    top: 18px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.flex li {
+    margin: 0 auto;
+}
+
+
+/*----------------------------------ここからPCモニターの記述-----------*/
+@media screen and (min-width: 720px) {
+
+    /*ロゴの大きさを調整*/
+    #logo img {
+        max-width: 250px;
+    }
+
+
+    .Toggle {
+        display: none;
+    }
+
+    .menu {
+        background-color: transparent;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    .flex {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .flex li {
+        margin-left: 30px;
+        list-style: none;
+    }
+
+}
+
+@media screen and (max-width:580px) {
+    .title {
+        margin-top: 0;
+    }
+}

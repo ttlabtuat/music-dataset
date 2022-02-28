@@ -1,18 +1,353 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
+
 <head>
-<meta charset="UTF-8">
-<title>Music Database for Research</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" rel="stylesheet">
+    <title>TUAT Open Music Dataset for Research</title>
+
+    <link rel="stylesheet" href="css/meanmenu.css" />
+    <link rel="stylesheet" href="css/menu.css" />
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="js/jquery.meanmenu.js"></script>
+    <script>
+        $(function () {
+            $('.Toggle').click(function () {
+                $(this).toggleClass('active');
+                $('.menu').toggleClass('open');
+            });
+        });
+    </script>
+
 </head>
- 
+
 <body>
-<main>
-  <h1>In preparation [test]</h1>
-  
-</main>
- 
-<script>
-</script>
+    <div class="base">
+        <!-- ページレイアウト -->
+
+        <!-- <hr class="hr3"> -->
+
+        <div class="box">
+            <!-- ボックス格納 -->
+            <nav>
+                <div class="inner flex">
+                    <div class="drawer">
+                        <!--- いわゆるロゴ svg を利用------>
+                        <div class="logo">
+                            <h1>
+                                <a href="https://www.sip.tuat.ac.jp/">
+                                    <img src="img/LOGO with TUAT.png" width="120" alt="TUAT Biosignal Informatics Lab">
+                                </a>
+                            </h1>
+                        </div>
+
+                        <!-- ハンバーガーメニュー部分 -->
+                        <div class="Toggle">
+                            　　<span></span>
+                            　　<span></span>
+                            　　<span></span>
+                        </div>
+                    </div>
+                    <!-------------- drawer ここまで-->
+
+                    <div class="menu">
+                        <ul class="flex">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#overview">Overview</a></li>
+                            <li><a href="#dataset">Dataset</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <h1 class="title">TUAT Open Music Dataset for Research</h1>
+
+            <div class="work">
+                <!-- メインボックス -->
+
+
+                <h3 id="overview">Overview</h2>
+                    <p class="p1">
+                        We created forty-five pieces that consisted of melodies produced by piano sounds without
+                        harmony. The musical stimuli (MIDI) were synthesized by Sibelius (Avid Technology, USA), a music
+                        computation and notation program. The sound intensities of all of the generated musical pieces
+                        were identical. The length of each musical piece was 34 s, with the tempo set to 150 beats per
+                        minute (bpm) (i.e., the frequency of a quarter of a note was 2.5 Hz). We set the sampling
+                        frequency to 44,100 Hz.
+                    </p>
+                    <hr class="hr3">
+
+                    <h3 id="dataset">Dataset</h3>
+                    <h4 id="music-list">Music List</h4>
+                    <p class="p1">Music for the audio stimuli are shown below.</p>
+                    <div class="wrapper">
+                        <table class="design04 sticky">
+                            <thead class="fixed">
+                                <tr>
+                                    <th>Composer</th>
+                                    <th>Title</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>L. v. Beethoven </td>
+                                    <td>Symphony "Ode to Joy" </td>
+                                </tr>
+                                <tr>
+                                    <td>G. Bizet </td>
+                                    <td>Carmen "Toreador Song" </td>
+                                </tr>
+                                <tr>
+                                    <td>J. Brahms </td>
+                                    <td>Hungarian Dances No.5</td>
+                                </tr>
+                                <tr>
+                                    <td>F. F. Chopin</td>
+                                    <td>Minute Waltz</td>
+                                </tr>
+                                <tr>
+                                    <td>A. Dvorak </td>
+                                    <td>Symphony No.9 "New World"</td>
+                                </tr>
+                                <tr>
+                                    <td>S. E. W. Elgar </td>
+                                    <td>Pomp and Circumstance Marches </td>
+                                </tr>
+                                <tr>
+                                    <td>E. H. Grieg </td>
+                                    <td>In the Hall of the Mountain King </td>
+                                </tr>
+                                <tr>
+                                    <td>G. F. Handel </td>
+                                    <td>Messiah "Hallelujah" </td>
+                                </tr>
+                                <tr>
+                                    <td>G. Holst </td>
+                                    <td>Planets "Mercury" </td>
+                                </tr>
+                                <tr>
+                                    <td>F. Mendelssohn</td>
+                                    <td>Wedding March</td>
+                                </tr>
+                                <tr>
+                                    <td>W. A. Mozart </td>
+                                    <td>Eine Kline Nachtmusik </td>
+                                </tr>
+                                <tr>
+                                    <td>W. A. Mozart </td>
+                                    <td>Piano Sonata No.11-3 "Turkish March"</td>
+                                </tr>
+                                <tr>
+                                    <td>H. Necke </td>
+                                    <td>Csikos Post </td>
+                                </tr>
+                                <tr>
+                                    <td>J. Offenbach </td>
+                                    <td>Orpheus in the Underworld </td>
+                                </tr>
+                                <tr>
+                                    <td>J. Pachelbel </td>
+                                    <td>Canon </td>
+                                </tr>
+                                <tr>
+                                    <td>S. S. Prokofiev </td>
+                                    <td>Romeo and Juliet "Montagues and Capulets" </td>
+                                </tr>
+                                <tr>
+                                    <td>G. A. Rossini </td>
+                                    <td>William Tell Overture </td>
+                                </tr>
+                                <tr>
+                                    <td>E. A. L. Satie </td>
+                                    <td>Gymnopedie No.1</td>
+                                </tr>
+                                <tr>
+                                    <td>E. A. L. Satie </td>
+                                    <td>Je te veux </td>
+                                </tr>
+                                <tr>
+                                    <td>J. Strauss </td>
+                                    <td>Voices of Spring Waltz </td>
+                                </tr>
+                                <tr>
+                                    <td>P. I. Tchaikovsky </td>
+                                    <td>Swan Lake "Scene" </td>
+                                </tr>
+                                <tr>
+                                    <td>P. I. Tchaikovsky </td>
+                                    <td>The Nutcracker "March"</td>
+                                </tr>
+                                <tr>
+                                    <td>P. I. Tchaikovsky </td>
+                                    <td>The Nutcracker "Waltz of the Flowers"</td>
+                                </tr>
+                                <tr>
+                                    <td>I. Albeniz </td>
+                                    <td>Piano Sonata Op.82</td>
+                                </tr>
+                                <tr>
+                                    <td>L. v. Beethoven </td>
+                                    <td>Piano Sonata Op.14-1</td>
+                                </tr>
+                                <tr>
+                                    <td>A. Diabelli </td>
+                                    <td>Sonatina Op.151-2</td>
+                                </tr>
+                                <tr>
+                                    <td>A. Dvorak </td>
+                                    <td>Waltz </td>
+                                </tr>
+                                <tr>
+                                    <td>A. Dvorak </td>
+                                    <td>Serenade for Strings Op. 22-3 "Scherzo"</td>
+                                </tr>
+                                <tr>
+                                    <td>A. Dvorak </td>
+                                    <td>Serenade for Strings Op. 22-5 "Finale"</td>
+                                </tr>
+                                <tr>
+                                    <td>G. U. Faure </td>
+                                    <td>Dolly Suite Op. 56 "Kitty-valse"</td>
+                                </tr>
+                                <tr>
+                                    <td>E. H. Grieg </td>
+                                    <td>Lyric Pieces Op.47-6 "Spring dance"</td>
+                                </tr>
+                                <tr>
+                                    <td>F. J. Haydn </td>
+                                    <td>Piano Sonata No.12</td>
+                                </tr>
+                                <tr>
+                                    <td>F. J. Haydn </td>
+                                    <td>Piano Sonata No.28</td>
+                                </tr>
+                                <tr>
+                                    <td>F. J. Haydn </td>
+                                    <td>Piano Sonata No.33</td>
+                                </tr>
+                                <tr>
+                                    <td>F. Kuhlau </td>
+                                    <td>Sonatina Op.55-1</td>
+                                </tr>
+                                <tr>
+                                    <td>T. Leschetizky </td>
+                                    <td>Humoresque </td>
+                                </tr>
+                                <tr>
+                                    <td>F. Mendelssohn</td>
+                                    <td>Songs Without Words Op.19-1</td>
+                                </tr>
+                                <tr>
+                                    <td>W. A. Mozart </td>
+                                    <td>Piano Sonata KV309</td>
+                                </tr>
+                                <tr>
+                                    <td>S. S. Prokofiev </td>
+                                    <td>10 Pieces Op.12-2 Gavotte</td>
+                                </tr>
+                                <tr>
+                                    <td>S. S. Prokofiev </td>
+                                    <td>10 Pieces Op.12-3 Rigaudon</td>
+                                </tr>
+                                <tr>
+                                    <td>F. P. Schubert </td>
+                                    <td>Piano Sonata No.4 Scherzo</td>
+                                </tr>
+                                <tr>
+                                    <td>F. P. Schubert </td>
+                                    <td>Piano Sonata No.6-3</td>
+                                </tr>
+                                <tr>
+                                    <td>F. P. Schubert </td>
+                                    <td>String Quartet No.2</td>
+                                </tr>
+                                <tr>
+                                    <td>F. P. Schubert </td>
+                                    <td>String Quartet No.3</td>
+                                </tr>
+                                <tr>
+                                    <td>W. R. Wagner </td>
+                                    <td>Piano Sonata Op. 1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr class="hr3">
+
+                    <h4 id="download">Donwload of datasets</h4>
+                    <p class="p1">
+                        You can download our datasets from <a href="https://github.com/ttlabtuat/music-dataset">here</a>.
+                        Both MIDI and WAVE files are availavle.
+                    </p>
+                    <hr class="hr3">
+
+                    <h4 id="publication">Publication</h4>
+                    <p class="p1">
+                        A full data descriptor is published in <a
+                            href=https://www.frontiersin.org/articles/10.3389/fnhum.2018.00444/full>Frontiers</a>.
+                        If you use TUAT Open Music Dataset in your research, please cite the following paper.</p>
+
+                    <p class="p3">
+                        @article{kumagai2018music, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;title={Music familiarity affects {EEG} entrainment when little attention
+                        is paid}, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;author={Kumagai, Yuiko and Matsui, Ryosuke and Tanaka, Toshihisa}, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;journal={Frontiers in Human Neuroscience}, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;volume={12}, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;pages={444}, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;year={2018}, <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;publisher={Frontiers} <br>
+                        }
+                    </p>
+
+
+                    <hr class="hr3">
+
+                    <h4 id="licenses">Licenses</h4>
+                    <ul>
+                        <li>The metadata is released under the Creative Commons Attribution 4.0 International License
+                            (CC BY 4.0).</li>
+                        <li>We do not hold the copyright on the audio and distribute it under the license chosen by the
+                            artist.</li>
+                        <li>The dataset is meant for research purposes.</li>
+                    </ul>
+
+                    <hr class="hr3">
+                    <h3 id="contact">Contact</h3>
+                    <p class="p1">For any queries, please contact:<br>
+                        <dd class="dd1">
+                            Toshihisa Tanaka (<a href="https://www.sip.tuat.ac.jp/">TUAT Biosignal Informatics
+                                Lab</a>)<br>
+                        </dd>
+                        <dd class="dd1"> Email: tanakat (at) cc.tuat.ac.jp</dd>
+                    </p>
+
+                    <hr class="hr3">
+
+
+            </div><!-- メインボックス：終わり -->
+
+
+        </div><!-- ボックス格納：終わり -->
+
+
+        <div class="footer">
+            <!-- フッター -->
+
+            <address>
+                Copyright&copy; 2022 Y. Kumagai.
+                <!--著作権表示-->&nbsp;&#9752;
+                <cite>designed by <a href="https://fc.ashrose.net/" target="_top">flower&amp;clover</a></cite>
+            </address>
+
+        </div><!-- フッター：終わり -->
+
+
+    </div><!-- ページレイアウト：終わり -->
+
 </body>
+
 </html>
